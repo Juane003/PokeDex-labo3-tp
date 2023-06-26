@@ -2,6 +2,7 @@ import { fetchPokemon } from "./src/api";
 import { pokeApiBaseUrl } from "./src/constants";
 import { PokemonAccordion } from "./src/components/PokemonAccordion";
 import { PokemonAccordionData } from "./src/components/PokemonAccordionData";
+import { PokemonDetailsCard } from "./src/components/PokemonDetailsCard";
 import "./style.css";
 import sun from "./src/Assets/modes/sun.svg";
 import moon from "./src/Assets/modes/moon.svg";
@@ -127,7 +128,6 @@ const options = {
 
   observer.observe($loadingBtn);
 })();
-
 
 (function () {
   const $htmlEl = document.querySelector("html");
