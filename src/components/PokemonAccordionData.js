@@ -1,5 +1,6 @@
 import { PokemonType } from "./PokemonType";
 import { StatBar } from "./StatBar";
+import { parsePokemonId } from "../parsePokemonId";
 
 export const PokemonAccordionData = ({ pokemonData }) => {
   return `
@@ -30,6 +31,9 @@ export const PokemonAccordionData = ({ pokemonData }) => {
                     }, 0)}
                 </span>
             </div>
+            <button id="pokemon-${parsePokemonId(
+              `${pokemonData.id}`
+            )}" class="bg-gray-500 text-gray-200 px-4 py-2 mb-4 rounded-md hover:bg-gray-700 duration-300">View More</button>
     </div>
     `;
 };
