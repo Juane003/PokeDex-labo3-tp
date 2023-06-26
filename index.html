@@ -2,12 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/pokeball_logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>PokeDex</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="dark:bg-slate-900 min-h-screen duration-300">
+      <main class="flex flex-col items-center justify-center p-4 duration-300">
+        <div class="sticky top-4 flex w-full justify-end z-50">
+          <button
+            id="dark-mode"
+            class="fixed p-2 z-10 sm:right-20 top-4 bg-violet-300 dark:bg-orange-300 text-lg rounded-md"
+          ></button>
+        </div>
+        <h1
+          class="[font-family:pokemon] text-6xl mb-4 p-4 [background-size:300%_auto] drop-shadow-[0_1.5px_1.2px_blue] animate-text-gradient bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 font-extrabold text-transparent bg-clip-text"
+        >
+          PokeDex
+        </h1>
+        <section
+          class="p-4 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          id="accordion-container"
+        ></section>
+      </main>
+      <footer class="w-full flex items-center justify-center">
+        <button
+          id="loading"
+          class="border border-black rounded-md px-4 py-2 hover:bg-black hover:text-white duration-300 dark:text-white dark:border-white dark:hover:bg-white dark:hover:text-black"
+        >
+          Load More
+        </button>
+      </footer>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
