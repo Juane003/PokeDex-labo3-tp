@@ -1,6 +1,6 @@
-import { parsePokemonId } from "../parsePokemonId";
-import { colors } from "../PokemonTypesColors";
-import { getType } from "../PokemonTypesAssetSelector";
+import { parsePokemonId } from "../utils/parsePokemonId";
+import { colors } from "../utils/PokemonTypesColors";
+import { getType } from "../utils/PokemonTypesAssetSelector";
 
 export const PokemonInfo = ({ pokemon }) => {
   return `

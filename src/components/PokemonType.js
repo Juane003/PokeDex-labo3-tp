@@ -1,4 +1,4 @@
-import { getType, getTypeBgColor } from "../PokemonTypesAssetSelector";
+import { getType, getTypeBgColor } from "../utils/PokemonTypesAssetSelector";
 export const PokemonType = ({ pokemonData }) => {
   return `
     <span class="font-semibold">${

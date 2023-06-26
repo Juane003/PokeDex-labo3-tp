@@ -1,5 +1,5 @@
 import { PokemonType } from "./PokemonType";
-import { parsePokemonId } from '../parsePokemonId'
+import { parsePokemonId } from '../utils/parsePokemonId'
 import { StatBar } from "./StatBar";
 
 export const PokemonAccordionData = ({ pokemonData }) => {

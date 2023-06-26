@@ -1,5 +1,5 @@
 import { pokemonHdSpriteUrl } from "../constants";
-import { parsePokemonId } from "../parsePokemonId";
+import { parsePokemonId } from "../utils/parsePokemonId";
 
 export const PokemonImage = ({ pokemon }) => {
   return `

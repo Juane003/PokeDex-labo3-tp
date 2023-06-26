@@ -17,7 +17,7 @@ import {
     rock,
     steel,
     water,
-  } from "./Assets";
+  } from "../Assets";
   import { colors } from "./PokemonTypesColors";
   
   export const types = {

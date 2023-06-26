@@ -1,4 +1,4 @@
-import { statBarColors } from "../PokemonTypesColors";
+import { statBarColors } from "../utils/PokemonTypesColors";
 
 export const StatBar = ({ stat }) => {
   return ` <div class="h-4 w-32 rounded-md m-4 bg-gray-400/70">
