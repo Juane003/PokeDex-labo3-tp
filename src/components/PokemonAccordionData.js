@@ -1,10 +1,10 @@
 import { PokemonType } from "./PokemonType";
+import { parsePokemonId } from '../parsePokemonId'
 import { StatBar } from "./StatBar";
-import { parsePokemonId } from "../parsePokemonId";
 
 export const PokemonAccordionData = ({ pokemonData }) => {
   return `
-    <div>
+    <section>
         <div class="flex gap-2 items-center justify-center">
             ${PokemonType({ pokemonData })}
         </div>
@@ -14,9 +14,9 @@ export const PokemonAccordionData = ({ pokemonData }) => {
                   `
                     <div class="flex flex-col items-center justify-center">
                         <div class="flex items-center justify-center ">
-                            <p class="capitalize w-16 text-sm">
+                            <span class="capitalize w-16 text-sm">
                                 ${stat.stat.name}: 
-                            </p> 
+                            </span> 
                             ${StatBar({ stat })}
                         </div>
                     </div>
@@ -34,6 +34,6 @@ export const PokemonAccordionData = ({ pokemonData }) => {
             <button id="pokemon-${parsePokemonId(
               `${pokemonData.id}`
             )}" class="bg-gray-500 text-gray-200 px-4 py-2 mb-4 rounded-md hover:bg-gray-700 duration-300">View More</button>
-    </div>
+    </section>
     `;
 };
