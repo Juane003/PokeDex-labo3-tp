@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./main.js", "./src/**/*.{js,ts}"],
+  darkMode: "class",
   theme: {
     extend: {
       keyframes: {

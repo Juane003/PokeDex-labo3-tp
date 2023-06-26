@@ -3,6 +3,9 @@ import { pokeApiBaseUrl } from "./src/constants";
 import { PokemonAccordion } from "./src/components/PokemonAccordion";
 import { PokemonAccordionData } from "./src/components/PokemonAccordionData";
 import "./style.css";
+import sun from "./src/Assets/modes/sun.svg";
+import moon from "./src/Assets/modes/moon.svg";
+export { sun, moon };
 let limit = 32;
 let offset = 0;
 let currentClicked;
@@ -123,4 +126,34 @@ const options = {
   }, options);
 
   observer.observe($loadingBtn);
+})();
+
+
+(function () {
+  const $htmlEl = document.querySelector("html");
+  const $darkModeBtn = document.querySelector("#dark-mode");
+
+  const initialModePreferenceIsDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  if (initialModePreferenceIsDark) {
+    document.documentElement.classList.add("dark");
+    $darkModeBtn.innerHTML = `<img src="${sun}" alt="sun" class="h-6 w-6"/>`;
+  } else {
+    document.documentElement.classList.remove("dark");
+    $darkModeBtn.innerHTML = `<img src="${moon}" alt="moon" class="h-6 w-6"/>`;
+  }
+
+  const toggleDarkMode = () => {
+    $htmlEl.classList.toggle("dark");
+    const isDarkMode = $htmlEl.classList.contains("dark");
+    if (isDarkMode) {
+      $darkModeBtn.innerHTML = `<img src="${sun}" alt="sun" class="h-6 w-6"/>`;
+    } else {
+      $darkModeBtn.innerHTML = `<img src="${moon}" alt="moon" class="h-6 w-6"/>`;
+    }
+  };
+
+  $darkModeBtn.addEventListener("click", toggleDarkMode);
 })();
